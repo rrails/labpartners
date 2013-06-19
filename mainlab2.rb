@@ -1,9 +1,12 @@
 #Authors
 #Ryan Drake
 #Sanjita Shah
-
+require 'pry'
+require 'pry-debugger'
 
 def validgroupsize
+
+  puts "The class will be divided into requested group sizes for the lab work"
   puts "Please enter group size"
   size = gets.chomp.to_i
     while size <= 0
@@ -18,7 +21,6 @@ grpsize = validgroupsize
 
 fgrp = []
 if randomlist.length > grpsize #class size is greater than group size
-
   #Split the class into groups of groupsize
   while !randomlist.empty?
     newlist = randomlist.pop grpsize
