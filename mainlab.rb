@@ -19,14 +19,14 @@ grpsize = gets.chomp.to_i
     puts "Please enter valid group size"
     grpsize = gets.chomp.to_i
   end
-
 return grpsize
 end
 
 def calculategroups
+  classsize = 11
   groupsize = validgroupsize
-  neq_groups = 11 / groupsize
-  remainder = 11 % groupsize
+  neq_groups = classsize / groupsize
+  remainder = classsize % groupsize
   lastgroup = 0
   if remainder != 0
       lastgroup = groupsize+remainder
@@ -46,4 +46,7 @@ end
 newlist = studlist.pop lastgrp
 finalgroup.push newlist
 puts "#{finalgroup}"
+finalgroup.join
+puts "#{finalgroup.join(" ")}"
+
 
