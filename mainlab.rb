@@ -11,22 +11,34 @@ def listofstudents()
   return randomlist
 end
 
-def calculategroups
-  puts "Please enter group size"
-  groupsize = gets.chomp.to_i
-  number_of_groups = 11 / groupsize
-  remainder = 11 % groupsize
-  if remainder != 0
-    lastgroup = groupsize+remainder
-    neq_groups = number_of_groups - 1
-    return lastgroup, neq_groups,groupsize
+def validgroupsize
+puts "Please enter group size"
+grpsize = gets.chomp.to_i
+
+  while grpsize <= 0
+    puts "Please enter valid group size"
+    grpsize = gets.chomp.to_i
   end
+
+return grpsize
+end
+
+def calculategroups
+  groupsize = validgroupsize
+  neq_groups = 11 / groupsize
+  remainder = 11 % groupsize
+  lastgroup = 0
+  if remainder != 0
+      lastgroup = groupsize+remainder
+      neq_groups = neq_groups - 1
+  end
+  return lastgroup,neq_groups,groupsize
 end
 
 lastgrp, neq, grpsize = calculategroups
 studlist = listofstudents
 finalgroup = []
-while neq != 0
+while neq > 0
   newlist = studlist.pop grpsize
   neq = neq - 1
   finalgroup.push newlist
