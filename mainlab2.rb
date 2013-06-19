@@ -3,12 +3,6 @@
 #Sanjita Shah
 
 
-def listofstudents()
-  studentlist = "Jack Andrew Sanjita Ryan Nick Steve Hui Will Tarun Dan Mike".split
-  list = studentlist.shuffle
-  return list
-end
-
 def validgroupsize
   puts "Please enter group size"
   size = gets.chomp.to_i
@@ -19,7 +13,7 @@ def validgroupsize
   return size
 end
 
-randomlist = listofstudents
+randomlist = "Jack Andrew Sanjita Ryan Nick Steve Hui Will Tarun Dan Mike".split.shuffle
 grpsize = validgroupsize
 
 fgrp = []
