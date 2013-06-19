@@ -5,12 +5,6 @@
 require 'pry'
 require 'pry-debugger'
 
-def listofstudents()
-  studentlist = "Jack Andrew Sanjita Ryan Nick Steve Hui Will Tarun Dan Mike".split
-  randomlist = studentlist.shuffle
-  return randomlist
-end
-
 def validgroupsize
 puts "Please enter group size"
 grpsize = gets.chomp.to_i
