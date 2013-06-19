@@ -23,7 +23,6 @@ while ans > wdisyd.length || ans<= 0
   ans = menu()
 end
 
-#Creates a new empty array
 emptyarray = []
 
 #Takes members from WDI Sydney class and splits them into new randomised groups
